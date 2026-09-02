@@ -13,7 +13,7 @@ const Home = () => {
 
         const heroText = [
                 <div>
-                        PhD, BASP Lab, Heriot-Watt University, Edinburgh &nbsp;|&nbsp; Erasmus Mundus MSc, IPCV
+                        Researcher &nbsp;|&nbsp; PhD Applicant
                         <div className='academic-hero'>
                                 <AcademicBar className='academic-hero' />
                         </div>                        
@@ -24,31 +24,20 @@ const Home = () => {
 
         const introText = [
                 <p style={{marginLeft: '10%', marginRight: 0}}>
-                        I am a current <b>PhD</b> scholar at the <b>Biomedical and Astronomical Signal Processing (BASP) Laboratory,
-                        Heriot-Watt University, Edinburgh, UK</b>. I am researching in the field of physics-based astronomical
-                        image reconstruction of black holes. 
-                        <br /><br />
-                        I recently completed my Triple-Masters degree in Image Processing and Computer Vision (<b>IPCV MSc</b>) at 
-                        universities in Hungary, Spain, and France, graduating with a 4.51/5 GPA and placing second in my batch. 
-                        I was fortunate to study with a 100% IPCV Excellence Scholarship. During my final semester, I interned 
-                        at <b>IMS Bordeaux</b>, working on "<i>Parameter Learning in Tomography.</i>"
-                        <br /><br />
-                        My academic journey began with a Bachelor of Technology degree from Amity University in Kolkata, India, in 2019, where 
-                        I was honored as the Silver Medalist in Electronics and Communication Engineering. My undergraduate thesis focused on 
-                        a medical imaging project in the realms of image processing and deep learning, earning "<i>extraordinary</i>" remarks. This 
-                        project built upon work I undertook during a summer internship at the prestigious Indian Statistical Institute.
-                        <br /><br />
-                        I have been recognized for my work with numerous awards and honors, including sponsorship of the Synapse AI Symposium, 
-                        winning the Cybathlon 2024 Vision Assistance Challenge, and receiving the Erasmus+ Grant.
-                        <br /><br />
-                        Before embarking on my current academic journey, I worked for three years as a Software Developer at TCS, from June 
-                        2019 to August 2022. During my tenure, I primarily specialized in frontend development with React JS, and occasionally 
-                        delved into managing SQL databases and some .NET backend development with C#.
-                        <br /><br />
-                        My academic and professional experiences have fueled my deep passion for applied mathematics, particularly within the 
-                        domains of Image Processing and Computer Vision. I find immense satisfaction in working with complex mathematical 
-                        algorithms and numerical data. Additionally, I have a profound interest in Astronomy and Cosmology, which continues 
-                        to inspire my intellectual pursuits.
+                              I'm Faisal Hossain Raquib, a researcher working at the intersection of Natural Language Processing, Explainable AI, and low-resource language technology. I recently completed my B.Sc. in Electrical &amp; Computer Engineering at Rajshahi University of Engineering &amp; Technology (RUET), Bangladesh, and I'm now looking to pursue a Ph.D. where I can push this work further.
+                                <br />
+                                <br />
+                                My research so far has centered on making NLP systems both <em>effective</em> and <em>understandable</em> for languages that are underserved by mainstream AI research — particularly Bangla. Over the past two years, I've worked on building large-scale Bangla hate-speech resources, including BanHate, an up-to-date, fine-grained Bangla hate speech dataset, and BanHADEX, the first human-annotated hate-speech explainability dataset for Bangla, built from nearly 20,000 annotated YouTube comments spanning seven hate categories with target and explanation labels. This work has been published at ACL 2026 and the BLP-2025 workshop (co-located with ACL), and I had the opportunity to present it at the 64th Annual Meeting of the Association for Computational Linguistics in San Diego.
+                                <br />
+                                <br />
+                                What ties this work together is a broader interest in <strong>trustworthy, explainable AI for languages and communities that current NLP tools often overlook</strong>. I want my Ph.D. to dig deeper into this — building models that don't just perform well on benchmark languages, but that are transparent, fair, and genuinely useful when applied to low-resource and multilingual settings.
+                                <br />
+                                <br />
+                                Beyond my research, I care about work that reaches people directly, not just papers. I founded Prarthona Paribar, a small non-profit distributing food and clothing to underprivileged communities during floods and Ramadan, and I've served as Vice President of both the Photographic Society of RUET and CESA.
+                                <br />
+                                <br />
+                                I'm currently seeking funded graduate research opportunities for Fall 2027, primarily Ph.D. positions in Natural Language Processing, Explainable &amp; Trustworthy AI, Low-Resource Language Processing, and Multimodal Learning. I'm also open to funded, thesis-based master's programs that offer a strong pathway toward doctoral research. If any of this overlaps with your lab's work, I'd love to connect.
+
                 </p>
         ];
 
@@ -57,7 +46,7 @@ const Home = () => {
         <div id='home'>
                 <div className='hero'>
                         {/* <HeroImage /> */}
-                        <h1>Subham SHOME</h1>
+                        <h1>Faisal Hossain Raquib</h1>
                         {heroText}
                 </div>
         </div>
@@ -75,14 +64,14 @@ const Home = () => {
                 </div>
                 <h3>Research Interests</h3>
                 <div className='research-card-section'>
-                <ResearchCard title="Image Reconstruction" />
-                <ResearchCard title="Radio Astronomy" />
-                <ResearchCard title="Inverse Problems" />
-                <ResearchCard title="Astroinformatics" />
-                <ResearchCard title="Applied Mathematics" />
-                <ResearchCard title="Tomographic Imaging" />
+                <ResearchCard title="Machine Learning" />
+                <ResearchCard title="Large Language Models" />
+                <ResearchCard title="Low-Resource Language" />
+                <ResearchCard title="Explainable AI" />
+                <ResearchCard title="Multimodal Learning" />
+                <ResearchCard title="Trustworthy AI" />
                 <ResearchCard title="Deep Learning" />
-                <ResearchCard title="Computer Vision" />
+                <ResearchCard title="Trustworthy AI" />
                 </div>
         </div>
 
@@ -91,6 +80,18 @@ const Home = () => {
                 <h1 className='home-headers'>Technical Expertise</h1>
                 <Skills />
         </div>
+
+  <div id='projects' className='sections-home'/>                            
+        <div style={{maxWidth: '100vw'}}>
+                <h1 className='home-headers'>Research Projects</h1>
+                <div className='projects-main'>
+                        <Projects />
+                </div>
+                
+                
+        </div>
+
+
 
         <div id='timeline' className='sections-home'/>                            
         <div className='timeline-main'>
@@ -105,15 +106,7 @@ const Home = () => {
         />
         </div>
 
-        <div id='projects' className='sections-home'/>                            
-        <div style={{maxWidth: '100vw'}}>
-                <h1 className='home-headers'>Research Projects</h1>
-                <div className='projects-main'>
-                        <Projects />
-                </div>
-                
-                
-        </div>
+      
 
         <div id='awards' className='sections-home'/>                            
         <div className='awards-main'>

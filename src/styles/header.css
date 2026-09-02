@@ -83,6 +83,36 @@
   font-size: 14px;
 }
 
+.night-mode-toggle {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.night-mode-toggle-scrolled {
+  border-color: black;
+  color: black;
+}
+
+.night-mode-toggle:hover {
+  background: white;
+  color: black;
+}
+
+.night-mode-toggle-scrolled:hover {
+  background: black;
+  color: white;
+}
+
+.mobile-night-mode-toggle {
+  margin-top: 12px;
+}
+
 .header-button-scrolled {
   border: 2px solid black;
   color: black;
@@ -115,7 +145,34 @@
   position: fixed;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   width: 100vw;
-} 
+}
+
+.App.night-mode .header {
+  background: rgba(11, 18, 32, 0.8);
+}
+
+.App.night-mode .header-link,
+.App.night-mode .a,
+.App.night-mode .camera-icon,
+.App.night-mode .header-button,
+.App.night-mode .night-mode-toggle {
+  color: #f3f4f6;
+  border-color: #f3f4f6;
+}
+
+.App.night-mode .header-button:hover,
+.App.night-mode .night-mode-toggle:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.App.night-mode .scrolled-a,
+.App.night-mode .scrolled-text,
+.App.night-mode .scrolled-camera-icon,
+.App.night-mode .header-button-scrolled {
+  color: #e5e7eb;
+  border-color: #e5e7eb;
+}
 
 .mobile-menu {
   display: none;

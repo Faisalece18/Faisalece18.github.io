@@ -5,7 +5,7 @@ import resume from '../assets/Subham_Shome_CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose, faCamera } from '@fortawesome/free-solid-svg-icons';
 
-const Header = () => {
+const Header = ({ isNightMode, onToggleNightMode }) => {
  const [scrolling, setScrolling] = useState(false);
  const blog = 'https://subhamshome.medium.com';
  const photoSite = 'https://www.subhamshomephotography.com';
@@ -90,6 +90,13 @@ const Header = () => {
         <Link to={resume} target="_blank" className={`header-button ${scrolling ? 'header-button-scrolled' : ''}`}>
           Resume
         </Link>
+        <button
+          type="button"
+          className={`night-mode-toggle ${scrolling ? 'night-mode-toggle-scrolled' : ''}`}
+          onClick={onToggleNightMode}
+        >
+          {isNightMode ? 'Day' : 'Night'}
+        </button>
         <div className="camera-div">
           <Link to={photoSite} target="_blank" rel="noopener noreferrer"  className={`a ${scrolling ? 'scrolled-camera-icon' : ''}`}>
             <FontAwesomeIcon icon={faCamera} />
@@ -132,6 +139,13 @@ const Header = () => {
             <Link to={resume} target="_blank" className="header-button-scrolled">
               Resume
             </Link>
+            <button
+              type="button"
+              className="night-mode-toggle mobile-night-mode-toggle"
+              onClick={onToggleNightMode}
+            >
+              {isNightMode ? 'Day' : 'Night'}
+            </button>
             <br />
             <div className='camera-div-mobile'>
               <Link to={photoSite} target="_blank" rel="noopener noreferrer" className="camera-icon">

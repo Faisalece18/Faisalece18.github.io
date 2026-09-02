@@ -16,6 +16,21 @@
     color: black;
 }
 
+.App.night-mode .home-headers,
+.App.night-mode .about h3,
+.App.night-mode .hero h1,
+.App.night-mode .hero p,
+.App.night-mode .intro-text-container,
+.App.night-mode .intro-text-container p,
+.App.night-mode .about,
+.App.night-mode .skills-main,
+.App.night-mode .timeline-main,
+.App.night-mode .projects-main,
+.App.night-mode .awards-main,
+.App.night-mode .contact-main {
+    color: white;
+}
+
 #home {
     
     background-image: url('../assets/ai_video.gif');
