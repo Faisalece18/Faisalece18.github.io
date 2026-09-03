@@ -26,6 +26,56 @@
 
 .timeline-card-content.rc-card{
     pointer-events: none !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+.timeline-card-content.rc-card.active,
+.timeline-card-content.rc-card[aria-selected="true"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+.timeline-card-content.rc-card .rc-card-title,
+.timeline-card-content.rc-card .timeline-card-title,
+.timeline-card-content.rc-card h1,
+.timeline-card-content.rc-card h2,
+.timeline-card-content.rc-card h3,
+.timeline-card-content.rc-card h4 {
+    color: #007fff !important;
+}
+
+.rc-card-title,
+.timeline-card-title {
+    color: #007fff !important;
+}
+
+.project-timeline-content p {
+    margin: 0;
+}
+
+.project-timeline-content {
+    pointer-events: auto;
+}
+
+.project-timeline-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.project-timeline-actions a {
+    background: #007fff;
+    color: white;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.project-timeline-actions a:hover {
+    background: #eb9f42;
 }
 
 @media (max-width: 1080px) {

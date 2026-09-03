@@ -72,6 +72,17 @@
     font-size: 18px;
 }
 
+.award-text-header a {
+    color: #eb2546;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.award-text-header a:hover {
+    color: #EB9F42;
+}
+
 .award-date {
     font-size: 14px;
     color: grey;

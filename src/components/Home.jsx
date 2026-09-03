@@ -96,12 +96,17 @@ const Home = () => {
         <div id='timeline' className='sections-home'/>                            
         <div className='timeline-main'>
                 
-        <h1 className='home-headers'>My journey so far</h1>
+        <h1 className='home-headers'>Projects</h1>
         <Timeline
                 mode="VERTICAL_ALTERNATING"
                 theme={{
                 primaryColor: "#000000",
                 secondaryColor: "#ffffff",
+                cardBgColor: "#ffffff",
+                cardDetailsBackGround: "#ffffff",
+                cardDetailsColor: "#111827",
+                cardTitleColor: "#007fff",
+                cardSubtitleColor: "#374151",
                 }}
         />
         </div>
@@ -110,7 +115,7 @@ const Home = () => {
 
         <div id='awards' className='sections-home'/>                            
         <div className='awards-main'>
-                <h1 className='home-headers'>Honors and Awards</h1>
+                <h1 className='home-headers'>Leadership &amp; Volunteer Experience</h1>
                 <Awards />
         </div>
 

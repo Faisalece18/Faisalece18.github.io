@@ -138,13 +138,18 @@
 
 .scrolled {
   background-color: white !important;
-  transition: background-color 0.3s ease;
+  opacity: 1;
+  transition: none;
   color: white;
   width: 100vw;
   height: 60px;
   position: fixed;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   width: 100vw;
+}
+
+.App.night-mode .header.scrolled {
+  background-color: #0b1220 !important;
 }
 
 .App.night-mode .header {
@@ -330,5 +335,4 @@
     color: black !important;
   }
 }
-
 

@@ -108,7 +108,7 @@
 }
 
 .intro-text-container {
-    text-align: left;
+    text-align: justify;
 }
 
 .research-card-section {
@@ -144,7 +144,7 @@
     }
 
     .intro-text-container {
-        text-align: center;
+        text-align: justify;
     }
 
     .about p {

@@ -9,7 +9,7 @@
 .academic-bar a {
     color: black;
     margin: 0 10px; 
-    font-size: 24px;
+    font-size: 28px;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -19,11 +19,11 @@
 }
 
 .linkedin:hover {
-    color: #0e76a8;
+    color: #0e76a8 !important;
 }
 
 .google-scholar:hover  {
-    color: #4285f4;
+    color: #4285f4 !important;
 }
 
 .instagram:hover {
@@ -39,9 +39,9 @@
 }
 
 .orcid:hover {
-    color: #A6CE39;
+    color: #A6CE39 !important;
 }
 
 .email:hover {
-    color: #EA4335;
+    color: #EA4335 !important;
 }

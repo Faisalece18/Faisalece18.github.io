@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'; 
 import { Link } from 'react-router-dom'; 
 import '../styles/header.css'; 
-import resume from '../assets/Subham_Shome_CV.pdf';
+import resume from '../assets/Faisal_Hossain_CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose, faCamera } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ isNightMode, onToggleNightMode }) => {
  const [scrolling, setScrolling] = useState(false);
- const blog = 'https://subhamshome.medium.com';
- const photoSite = 'https://www.subhamshomephotography.com';
- const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+ const blog = '';
+ const photoSite = '';
+ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
  const toggleMobileMenu = () => {
    setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -63,7 +63,7 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
         to='/' 
         className={`header-link ${scrolling ? 'scrolled-text' : ''}`}
         onClick={handleScrollToTopClick}>
-        <h2>Subham Shome</h2>
+        <h2>Faisal Hossain Raquib</h2>
       </Link>
       <nav className="nav">
         <a href="#about" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('about')}>
@@ -72,14 +72,14 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
         <a href="#skills" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('skills')}>
           Skills
         </a>
-        <a href="#timeline" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('timeline')}>
-          Timeline
-        </a>
         <a href="#projects" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('projects')}>
+          Research
+        </a>
+        <a href="#timeline" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('timeline')}>
           Projects
         </a>
         <a href="#awards" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('awards')}>
-          Awards
+          Leadership
         </a>
         <a href="#contact" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('contact')}>
           Contact
@@ -87,9 +87,9 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
         <Link to={blog} target="_blank" className={`a ${scrolling ? 'scrolled-a' : ''}`}>
           Blog
         </Link>
-        <Link to={resume} target="_blank" className={`header-button ${scrolling ? 'header-button-scrolled' : ''}`}>
+        <a href={resume} target="_blank" rel="noopener noreferrer" className={`header-button ${scrolling ? 'header-button-scrolled' : ''}`}>
           Resume
-        </Link>
+        </a>
         <button
           type="button"
           className={`night-mode-toggle ${scrolling ? 'night-mode-toggle-scrolled' : ''}`}
@@ -120,14 +120,14 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
             <a href="#skills" className="scrolled-a" onClick={handleScrollToSection('skills')}>
               Skills
             </a>
-            <a href="#timeline" className="scrolled-a" onClick={handleScrollToSection('timeline')}>
-              Timeline
-            </a>
             <a href="#projects" className="scrolled-a" onClick={handleScrollToSection('projects')}>
+              Research
+            </a>
+            <a href="#timeline" className="scrolled-a" onClick={handleScrollToSection('timeline')}>
               Projects
             </a>
             <a href="#awards" className="scrolled-a" onClick={handleScrollToSection('awards')}>
-              Awards
+              Leadership
             </a>
             <a href="#contact" className="scrolled-a" onClick={handleScrollToSection('contact')}>
               Contact
@@ -136,9 +136,9 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
               Blog
             </Link>
             <br />
-            <Link to={resume} target="_blank" className="header-button-scrolled">
+            <a href={resume} target="_blank" rel="noopener noreferrer" className="header-button-scrolled">
               Resume
-            </Link>
+            </a>
             <button
               type="button"
               className="night-mode-toggle mobile-night-mode-toggle"

@@ -65,6 +65,10 @@
     margin: 5px 0;
     color: #333;
 }
+
+.project-card-description {
+    text-align: center;
+}
   
 .project-card button {
     background-color: #007fff; 
@@ -112,6 +116,13 @@
 
 .project-card-title {
     padding-top: 15px;
+}
+
+.project-card-subtitle {
+    color: #007fff !important;
+    font-size: 0.95em;
+    font-style: italic;
+    margin: 4px 0 10px !important;
 }
 
 @keyframes fadeInUp {

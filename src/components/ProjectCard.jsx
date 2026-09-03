@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/projectcard.css';
 
-const ProjectCard = ({ title, description, image, buttonLabel, buttonLink }) => {
+const ProjectCard = ({ title, subtitle, description, image, buttonLabel, buttonLink }) => {
   const [isReadMoreOpen, setIsReadMoreOpen] = useState(false);
   const previewLength = 140;
 
@@ -15,6 +15,7 @@ const ProjectCard = ({ title, description, image, buttonLabel, buttonLink }) => 
       <div className="project-card-content-container">
         <div>
           <h4 className="project-card-title">{title}</h4>
+          <p className="project-card-subtitle">{subtitle}</p>
           <p className="project-card-description">
             {trimmedDescription}
           </p>
