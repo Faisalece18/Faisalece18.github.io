@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
 
@@ -12,10 +12,6 @@ const Contact = () => {
       <p>faisal.ece18@gmail.com</p>
    </a>];
    
-   const blog = [<a href="" target="_blank" rel="noopener noreferrer" className="contact-links">
-      <p>Personal Blog</p>
-   </a>];
-
    const facebook = [<a href="https://www.facebook.com/faisalhossain51151/" target="_blank" rel="noopener noreferrer" className="contact-links">
       <p>Facebook</p>
    </a>];
@@ -38,9 +34,6 @@ const Contact = () => {
                      </div>
                      <div className='contact-item'>
                         <FontAwesomeIcon icon={faEnvelope} />{email}
-                     </div>
-                     <div className='contact-item'>
-                        <FontAwesomeIcon icon={faMedium} />{blog}
                      </div>
                      <div className='contact-item'>
                         <FontAwesomeIcon icon={faLinkedin} />{linkedin}

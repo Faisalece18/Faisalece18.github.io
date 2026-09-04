@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/header.css'; 
 import resume from '../assets/Faisal_Hossain_CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faClose, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ isNightMode, onToggleNightMode }) => {
  const [scrolling, setScrolling] = useState(false);
- const blog = '';
- const photoSite = '';
  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
  const toggleMobileMenu = () => {
@@ -84,24 +82,18 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
         <a href="#contact" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('contact')}>
           Contact
         </a>
-        <Link to={blog} target="_blank" className={`a ${scrolling ? 'scrolled-a' : ''}`}>
-          Blog
-        </Link>
         <a href={resume} target="_blank" rel="noopener noreferrer" className={`header-button ${scrolling ? 'header-button-scrolled' : ''}`}>
-          Resume
+          CV
         </a>
         <button
           type="button"
           className={`night-mode-toggle ${scrolling ? 'night-mode-toggle-scrolled' : ''}`}
           onClick={onToggleNightMode}
+          aria-label={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
+          title={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
         >
-          {isNightMode ? 'Day' : 'Night'}
+          <FontAwesomeIcon icon={isNightMode ? faSun : faMoon} />
         </button>
-        <div className="camera-div">
-          <Link to={photoSite} target="_blank" rel="noopener noreferrer"  className={`a ${scrolling ? 'scrolled-camera-icon' : ''}`}>
-            <FontAwesomeIcon icon={faCamera} />
-          </Link>
-        </div>
       </nav>
 
       <button className={`mobile-menu-button ${scrolling ? 'scrolled-mobile-menu-button' : ''} 
@@ -132,26 +124,20 @@ const Header = ({ isNightMode, onToggleNightMode }) => {
             <a href="#contact" className="scrolled-a" onClick={handleScrollToSection('contact')}>
               Contact
             </a>
-            <Link to={blog} target="_blank" className="scrolled-a">
-              Blog
-            </Link>
             <br />
             <a href={resume} target="_blank" rel="noopener noreferrer" className="header-button-scrolled">
-              Resume
+              CV
             </a>
             <button
               type="button"
               className="night-mode-toggle mobile-night-mode-toggle"
               onClick={onToggleNightMode}
+              aria-label={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
+              title={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
             >
-              {isNightMode ? 'Day' : 'Night'}
+              <FontAwesomeIcon icon={isNightMode ? faSun : faMoon} />
             </button>
             <br />
-            <div className='camera-div-mobile'>
-              <Link to={photoSite} target="_blank" rel="noopener noreferrer" className="camera-icon">
-                <FontAwesomeIcon icon={faCamera} />
-              </Link>
-            </div>
         </nav>
       </div>
       

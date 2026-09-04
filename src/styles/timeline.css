@@ -1,17 +1,51 @@
-.chrono-icons {
-    size: 24px;
-}
+/* =====================================================
+   MAIN TIMELINE WRAPPER
+===================================================== */
 
 .timeline-main-wrapper {
-    pointer-events: none !important;
+    width: 100%;
     min-width: 100%;
+    pointer-events: auto !important;
+
+    /* Let the PAGE handle scrolling */
+    overflow: visible !important;
 }
 
-.using-icon img {
-    max-height: 400% !important;
-    max-width: 400% !important;
-    border: 1px solid black;
+
+/* =====================================================
+   CHRONO ICON
+===================================================== */
+
+.chrono-icons {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #0b3850;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.chrono-icons img {
+    display: block;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =====================================================
+   TIMELINE TITLES
+===================================================== */
+
+.timeline-item-title.rc-title {
+    color: #EB9F42 !important;
 }
 
 .timeline-item-title.rc-title.active {
@@ -20,23 +54,41 @@
     border: none !important;
 }
 
-.timeline-item-title.rc-title {
-    color: #EB9F42 !important;
-}
 
-.timeline-card-content.rc-card{
-    pointer-events: none !important;
+/* =====================================================
+   TIMELINE CARD
+===================================================== */
+
+.timeline-card-content.rc-card {
+    pointer-events: auto !important;
+
     background: #ffffff !important;
     background-color: #ffffff !important;
+
     color: #111827 !important;
+
+    overflow: visible !important;
 }
+
+
+/* Active card */
 
 .timeline-card-content.rc-card.active,
 .timeline-card-content.rc-card[aria-selected="true"] {
+    pointer-events: auto !important;
+
     background: #ffffff !important;
     background-color: #ffffff !important;
+
     color: #111827 !important;
+
+    overflow: visible !important;
 }
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
 
 .timeline-card-content.rc-card .rc-card-title,
 .timeline-card-content.rc-card .timeline-card-title,
@@ -52,35 +104,175 @@
     color: #007fff !important;
 }
 
+
+/* =====================================================
+   PROJECT CONTENT
+===================================================== */
+
+.project-timeline-content {
+    position: relative;
+
+    width: 100%;
+
+    pointer-events: auto !important;
+
+    z-index: 10;
+
+    overflow: visible !important;
+}
+
 .project-timeline-content p {
     margin: 0;
 }
 
-.project-timeline-content {
-    pointer-events: auto;
-}
+
+/* =====================================================
+   BUTTON CONTAINER
+===================================================== */
 
 .project-timeline-actions {
     display: flex;
+
+    align-items: center;
+
     gap: 12px;
+
     margin-top: 16px;
+
+    position: relative;
+
+    z-index: 9999;
+
+    pointer-events: auto !important;
 }
+
+
+/* =====================================================
+   PROJECT BUTTON
+===================================================== */
+
+.project-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 99999;
+
+    pointer-events: auto !important;
+
+    cursor: pointer !important;
+
+    padding: 8px 14px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =====================================================
+   GITHUB BUTTON
+===================================================== */
+
+.github-button {
+    background: #007fff;
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   DEMO BUTTON
+===================================================== */
+
+.demo-button {
+    background: #007fff;
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   BUTTON HOVER
+===================================================== */
+
+.project-button:hover {
+    background: #EB9F42;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   BUTTON ACTIVE
+===================================================== */
+
+.project-button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   FORCE LINKS TO BE CLICKABLE
+===================================================== */
 
 .project-timeline-actions a {
-    background: #007fff;
-    color: white;
-    padding: 8px 14px;
-    text-decoration: none;
-    border-radius: 4px;
+    display: inline-flex;
+
+    position: relative;
+
+    z-index: 999999;
+
+    pointer-events: auto !important;
+
+    cursor: pointer !important;
+
+    user-select: none;
 }
 
-.project-timeline-actions a:hover {
-    background: #eb9f42;
+
+/* =====================================================
+   CHRONO CARD INTERACTION
+===================================================== */
+
+.timeline-card-content.rc-card {
+    pointer-events: auto !important;
 }
+
+
+/* =====================================================
+   DO NOT CREATE AN INNER SCROLLBAR
+===================================================== */
+
+.timeline-main-wrapper,
+.timeline-main-wrapper > div,
+.timeline-card-content.rc-card {
+    overflow-y: visible !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 1080px) {
+
     .timeline-item-title.rc-title {
         padding-right: 5px;
+
         font-size: 14px;
     }
 
@@ -92,11 +284,30 @@
         margin-left: 5px;
     }
 
-    .using-icon img {
-        max-height: 275% !important;
-        max-width: 275% !important;
-        border: 1px solid black;
-        border-radius: 50%;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .timeline-main-wrapper {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .project-timeline-actions {
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    .project-button {
+        padding: 7px 12px;
+
+        font-size: 13px;
     }
 
 }
